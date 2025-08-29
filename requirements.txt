@@ -1,0 +1,7 @@
+Flask
+pandas
+SQLAlchemy
+pymysql
+matplotlib
+seaborn
+Faker

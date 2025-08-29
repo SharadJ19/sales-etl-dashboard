@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales ETL Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* ---------------- BODY & TYPOGRAPHY ---------------- */
+        body {
+            background-color: #f5f5f5; /* soft gray */
+            font-family: 'Open Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h5, p {
+            color: #333333; /* dark gray text */
+        }
+
+        /* ---------------- NAVBAR ---------------- */
+        .navbar {
+            background-color: #2c3e50; /* dark slate blue */
+        }
+        .navbar .navbar-brand, .navbar .nav-link {
+            color: #ffffff;
+        }
+        .navbar .nav-link:hover {
+            color: #1abc9c; /* accent teal */
+        }
+
+        /* ---------------- CONTAINER ---------------- */
+        .container {
+            flex: 1;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* ---------------- CARDS ---------------- */
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+        }
+        .card-title {
+            font-weight: 600;
+        }
+
+        /* ---------------- BUTTONS ---------------- */
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .btn-success {
+            background-color: #1abc9c;
+            border-color: #1abc9c;
+        }
+        .btn-success:hover {
+            background-color: #16a085;
+            border-color: #16a085;
+        }
+        .btn-outline-primary {
+            border-color: #3498db;
+            color: #3498db;
+        }
+        .btn-outline-primary:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 0.75rem 0;
+            flex-shrink: 0;
+        }
+
+        /* ---------------- JUMBOTRON ---------------- */
+        .jumbotron {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Sales ETL App</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="jumbotron mb-5">
+            <h1 class="display-5">Sales ETL Dashboard</h1>
+            <p class="lead">Run ETL, explore analytics, and view raw data effortlessly.</p>
+        </div>
+
+        <!-- FEATURE CARDS -->
+        <div class="row g-4">
+            <!-- ETL Pipeline -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">ETL Pipeline</h5>
+                        <p class="card-text">Extract CSV data, transform it, and load into the database automatically.</p>
+                        <a href="/etl" class="btn btn-primary mt-3">Run ETL</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Dashboard -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Analytics</h5>
+                        <p class="card-text">Visualize insights: top customers, revenue trends, best-selling products, and more.</p>
+                        <a href="/analytics" class="btn btn-success mt-3">View Analytics</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Raw Data Viewer -->
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Raw Data Viewer</h5>
+                        <p class="card-text">View first 500 rows of customers, products, orders, and dates tables.</p>
+                        <div class="d-grid gap-2">
+                            <a href="/data/dim_customer" class="btn btn-outline-primary btn-sm">Customers</a>
+                            <a href="/data/dim_product" class="btn btn-outline-primary btn-sm">Products</a>
+                            <a href="/data/fact_sales" class="btn btn-outline-primary btn-sm">Orders</a>
+                            <a href="/data/dim_date" class="btn btn-outline-primary btn-sm">Dates</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2025 Sales ETL App
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
