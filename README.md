@@ -37,6 +37,10 @@
 
 ## 📺 Demo
 
+https://github.com/user-attachments/assets/5deb76fa-d905-4e30-a8ea-159bfbcd1ac1
+
+## 🔗 Screenshots
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/efd26e8f-1954-4f43-aa12-fbf2b73d5b21" alt="Home" width="80%" />
 </p>
